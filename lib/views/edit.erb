@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>The Gossip Project</title>
+  </head>
+  <body>
+    <h1>Tu as demandé à éditer un potin ?</h1>
+
+
+    <h2>Le voici :
+      Potin n°<%= id%></h2>
+    <p>
+      De : <%= gossip.author %>
+    </p>
+    <p>
+      Le potin : <%= gossip.content %>
+    </p>
+
+    <form action='/gossips/<%= id%>/edit/' method='POST'>
+      Nouveau nom d'auteur : <input type='text' name='new_author'/><br/>
+      Potin modifié : <input type='text' name='new_content'/><br/>
+      <input type='submit'/>
+    </form>
+    
+    <a href='/'>Retour à la page des potins</a>
+  </body>
+</html>
